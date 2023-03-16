@@ -7,8 +7,8 @@ public class App {
 
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("Test\\src\\Sample.txt"));
-            String line = "x";
+            reader = new BufferedReader(new FileReader("src\\Sample.txt"));
+            String line = reader.readLine();
 
             for (int i = 0; line != null; i++) {
                 line = reader.readLine();
