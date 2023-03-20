@@ -31,6 +31,7 @@ public class Subject {
                 else {
                     if (line != null) {
                         Student current = new Student(line);
+                        System.out.println(current.checkStudentName());
                         students.add(current);
                     
                     }
