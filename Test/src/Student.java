@@ -9,10 +9,12 @@ public class Student {
     private int midtermMark;
     private int finalMark;
     int sum;
-    String STRING_EMPTY = "Error: Student is empty.";
-    String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and Spaces.";
-    String STUDENT_NUMBER_START = "Error: Student number must start with a number.";
+    final String STRING_EMPTY = "Error: Student is empty.";
+    final String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
+    final String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.";
+    final String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.";
+    final String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.";
+    final String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.";
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -97,23 +99,22 @@ public class Student {
         }
         return "";              
     }
+    //TODO()
     String checkStudentNumber()
     {
-        if(!Character.isDigit(number.charAt(0))){
+        if(number.length()!=8) return STUDENT_NUMBER_INVALID_LENGTH;
         
-            return STUDENT_NUMBER_START;
+        for(int i = 0; i<7; i++)
+        {
+            if(!Character.isDigit(number.charAt(i)))
+            
+             return STUDENT_NUMBER_CONTAIN;
+              
         }
+        if(!Character.isAlphabetic(number.charAt(number.length()-1)) && !Character.isDigit(number.charAt(number.length()-1)))
         
-
-
-
-
-
-
-
-
-
-
+        return STUDENT_NUMBER_END;
+    
         return "";   
     }
 
