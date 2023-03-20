@@ -1,0 +1,12 @@
+output.txt
+<<<<<<< HEAD
+Test/src/Sample.txt
+lib/junit-platform-console-standalone-1.9.2.jar
+
+=======
+lib/hamcrest-core-1.3.jar
+lib/junit-4.13.2.jar
+lib/junit-platform-console-standalone-1.9.2.jar
+output.txt
+Test/src/Sample.txt
+>>>>>>> d5cdc235d4c2b24d2744d0c352882609225d0463

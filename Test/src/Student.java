@@ -1,4 +1,6 @@
 
+
+
 public class Student {
     private String name;
     private String number;
@@ -11,8 +13,6 @@ public class Student {
     String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
     String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and Spaces.";
     String STUDENT_NUMBER_START = "Error: Student number must start with a number.";
-
-
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -80,10 +80,12 @@ public class Student {
     {
         return name;
     }
+    
     String getStudentNumber()
     {
         return number;
     }
+    
     String checkStudentName()
     {   
         if(name.length()==0) return STRING_EMPTY;
@@ -108,7 +110,5 @@ public class Student {
 
     
 
-
-
-
+     
 }

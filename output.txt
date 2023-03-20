@@ -1,6 +1,11 @@
 Subject name: MADAGAMDA		Max mark: 100
 
+<<<<<<< HEAD
+MARKkkkkkkkkkkkkkkk	999	3.7		A-
+Hardcode	6969	4.0		A
+=======
 MARKkk	999	3.7		A-
 	6969	4.0		A
+>>>>>>> d5cdc235d4c2b24d2744d0c352882609225d0463
 fortnitefortnite	69696	4.0		A+
 samir	9999	4.0		A+

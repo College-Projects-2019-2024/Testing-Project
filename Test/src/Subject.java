@@ -11,7 +11,7 @@ public class Subject {
     int fullMark;
     ArrayList<Student>students;
     
-
+   
     public void readFile(String filename){
         BufferedReader reader;
         students = new ArrayList<Student>();
@@ -30,6 +30,7 @@ public class Subject {
                 } 
                 else {
                     if (line != null) {
+
                         Student current = new Student(line);
                         System.out.println(current.checkStudentName());
                         students.add(current);
