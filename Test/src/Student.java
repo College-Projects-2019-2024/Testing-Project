@@ -1,4 +1,6 @@
 
+
+
 public class Student {
     private String name;
     private String number;
@@ -7,6 +9,10 @@ public class Student {
     private int midtermMark;
     private int finalMark;
     int sum;
+
+    String STRING_EMPTY = "Error: Student is empty.";
+    String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
+    String STUDENT_NAME_INVALID = "Error: Input must consist of Alphabetic characters and Spaces.";
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -75,9 +81,24 @@ public class Student {
     {
         return name;
     }
+    
     String getStudentNumber()
     {
         return number;
     }
 
+    String checkStudentName()
+    {   
+        if(name.length()==0) return STRING_EMPTY;
+        if(name.charAt(0)==' ') return STUDENT_NAME_SPACE;
+        for(char c : name.toCharArray())
+        {
+           if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
+                return STUDENT_NAME_INVALID;
+           
+        }
+        return "";              
+    }
+
+     
 }
