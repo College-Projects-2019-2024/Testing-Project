@@ -11,7 +11,7 @@ public class InputTesting{
     @BeforeAll
     static void init(){
         s = new Subject();
-        s.readFile("C:\\Users\\mohamed\\Desktop\\tttt.txt");
+        s.readFile("C:\\Users\\Administrator\\JavaCode\\Testing-Project\\Test\\src\\Sample.txt");
     }
 
     @Test
