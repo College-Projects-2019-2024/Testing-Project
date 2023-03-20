@@ -14,12 +14,6 @@ public class Student {
     String STUDENT_NAME_INVALID = "Error: Input must consist of Alphabetic characters and Spaces.";
  
 
-
-
-    String STRING_EMPTY = "Error: Student is empty.";
-    String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    String STUDENT_NAME_INVALID = "Error: Input must consist of Alphabetic characters and Spaces.";
-
     Student(String s) {
         String[] attr = s.split(",");
         name = attr[0];
@@ -91,22 +85,7 @@ public class Student {
     {
         return number;
     }
-    String checkStudentName()
-    {   
-        if(name.length()==0) return STRING_EMPTY;
-        if(name.charAt(0)==' ') return STUDENT_NAME_SPACE;
-        for(char c : name.toCharArray())
-        {
-           if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
-                return STUDENT_NAME_INVALID;
-           
-        }
-        return "";              
-    }
-
-
-
-
+    
     String checkStudentName()
     {   
         if(name.length()==0) return STRING_EMPTY;

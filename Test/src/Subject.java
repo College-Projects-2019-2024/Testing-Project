@@ -32,11 +32,7 @@ public class Subject {
                     if (line != null) {
 
                         Student current = new Student(line);
-<<<<<<< HEAD
-                        System.out.println("lol\\n");
-=======
                         System.out.println(current.checkStudentName());
->>>>>>> d5cdc235d4c2b24d2744d0c352882609225d0463
                         students.add(current);
                     
                     }
