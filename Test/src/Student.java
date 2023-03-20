@@ -15,6 +15,10 @@ public class Student {
     final String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.";
     final String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.";
     final String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.";
+    final String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.";
+    final String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.";
+    final String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.";
+    final String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.";;
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -116,6 +120,15 @@ public class Student {
         return STUDENT_NUMBER_END;
     
         return "";   
+    }
+    String checkMarks()
+    {
+        String result = "";
+        if(activitiesMark<0 || activitiesMark>10)  result+=ERROR_ACTIVITES_MARK;
+        if(oral_practicalMark<0 || oral_practicalMark>10) result+= ERROR_ORAL_MARK;
+        if(midtermMark<0 || midtermMark>20) result+=ERROR_MIDTERM_MARK;
+        if(finalMark<0 || finalMark>60) result+=ERROR_FINAL_MARK;
+        return result;
     }
 
     
