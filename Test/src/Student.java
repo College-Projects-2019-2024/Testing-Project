@@ -9,8 +9,8 @@ public class Student {
     int sum;
     String STRING_EMPTY = "Error: Student is empty.";
     String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    String STUDENT_NAME_INVALID = "Error: Input must consist of Alphabetic characters and Spaces.";
- 
+    String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and Spaces.";
+    String STUDENT_NUMBER_START = "Error: Student number must start with a number.";
 
 
 
@@ -92,10 +92,21 @@ public class Student {
         {
            if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
                 return STUDENT_NAME_INVALID;
-           
         }
         return "";              
     }
+    String checkStudentNumber()
+    {
+        if(!Character.isDigit(number.charAt(0))){
+        
+            return STUDENT_NUMBER_START;
+        }
+        return "" ;
+    
+        
+    }
+
+    
 
 
 
