@@ -1,5 +1,10 @@
 MADAGAMDA,69,100
+<<<<<<< HEAD
 zARKkkkkkkkkkkkkkkk,999,6,9,18,57
 xardcode,6969,9,9,19,59
+=======
+MARKkk,999,6,9,18,57
+,6969,9,9,19,59
+>>>>>>> d5cdc235d4c2b24d2744d0c352882609225d0463
 fortnitefortnite,69696,9,9,20,60
 samir,9999,10,10,20,60
