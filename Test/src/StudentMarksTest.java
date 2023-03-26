@@ -8,11 +8,10 @@ import org.junit.jupiter.api.Test;
 public class StudentMarksTest{
     static Subject s;
 
-    final String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.";
-    final String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.";
-    final String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.";
-    final String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.";
-
+    final String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.\n";
+    final String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.\n";
+    final String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.\n";
+    final String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.\n";
     
     @BeforeAll
     static void init(){

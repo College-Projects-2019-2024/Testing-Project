@@ -32,9 +32,14 @@ public class Subject {
                     if (line != null) {
 
                         Student current = new Student(line);
-                        
-                        System.out.print(current.checkStudentNumber());
+                        if(current.testStudent() != ""){
+                            System.out.println("Student "+ i + ": ");
+                            System.out.print(current.testStudent());
+                        }
+            
                         students.add(current);
+                        
+                        
                     
                     }
 

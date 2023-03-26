@@ -9,16 +9,16 @@ public class Student {
     private int midtermMark;
     private int finalMark;
     int sum;
-    final String STRING_EMPTY = "Error: Student is empty.";
-    final String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    final String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.";
-    final String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.";
-    final String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.";
-    final String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.";
-    final String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.";
-    final String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.";
-    final String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.";
-    final String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.";
+    final String STRING_EMPTY = "Error: Student is empty.\n";
+    final String STUDENT_NAME_SPACE = "Error: Student name starts with a space.\n";
+    final String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.\n";
+    final String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.\n";
+    final String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.\n";
+    final String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.\n";
+    final String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.\n";
+    final String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.\n";
+    final String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.\n";
+    final String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.\n";
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -141,6 +141,7 @@ public class Student {
         
         if(midtermMark<0 || midtermMark>20) result=ERROR_MIDTERM_MARK;
         
+        
         return result;
     }
     String check_final()
@@ -151,7 +152,18 @@ public class Student {
         return result;
     }
 
-    
+    String testStudent(){
+        String result = "";
+        result+=checkStudentName();
+        result+=checkStudentNumber();
+        result+=check_activities();
+        result+=check_final();
+        result+=check_oral();
+        result+=check_midterm();
+
+        return result;
+
+    }
 
      
 }

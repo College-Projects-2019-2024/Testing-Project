@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 public class StudentNameTest{
     static Subject s;
 
-    final String STRING_EMPTY = "Error: Student is empty.";
-    final String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    final String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.";
+    final String STRING_EMPTY = "Error: Student is empty.\n";
+    final String STUDENT_NAME_SPACE = "Error: Student name starts with a space.\n";
+    final String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.\n";
     
 
     @BeforeAll
