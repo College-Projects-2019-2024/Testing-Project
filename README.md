@@ -14,13 +14,13 @@ The JUnit test cases in this project contain input data which includes studentâ€
 If you want contribute to this project or report a bug, please open an issue on the GitHub repository or send a pull request with your proposed changes.
 
 ## Credits
-This project was developed by:
+This project was developed by:<br />
 Mark Ashraf William 1900156<br />
 Mohamed Ahmed Samir 1900969<br />
 Marco Sherif Magdy  1900285<br /> 
 Hossam el din adel  1900969<br /> 
 
-as a part of a Software Testing Assignment.
+as a part of a Software Testing Project.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
