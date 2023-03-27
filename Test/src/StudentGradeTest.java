@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class StudentGradeTest{
     
-
     @Test
     void test1(){
         String expected = "A+";

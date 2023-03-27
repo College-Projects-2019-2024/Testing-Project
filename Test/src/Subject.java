@@ -6,6 +6,11 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class Subject {
+    //TODO()
+    public static final String ERROR_MAX_DEGREE = "Error: Max degree must be one of the following values: 100.\n";
+    final static String STRING_EMPTY = "Error: Subject Name is empty.\n";
+    final static String SUBJECT_NAME_SPACE = "Error: Subject name starts with a space.\n";
+    final static String SUBJECT_NAME_INVALID = "Error: Subject name must consist of alphabetic characters and spaces.\n";
     String name;
     String code;
     int fullMark;
@@ -80,6 +85,27 @@ public class Subject {
             except.printStackTrace();
         }
     }
+    
+    static String checkSubjectName(String s)
+    {   
+        if(s.length()==0) return STRING_EMPTY;
+        if(s.charAt(0)==' ') return SUBJECT_NAME_SPACE;
+        for(char c : s.toCharArray())
+        {
+           if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
+                return SUBJECT_NAME_INVALID;
+        }
+        return "";              
+    }
+    static String checkMaxDegree(int degree)
+    {
+        if(degree!=100) return ERROR_MAX_DEGREE;
+        else return "";  
+    }
+
+
+
+
     
 
 }
