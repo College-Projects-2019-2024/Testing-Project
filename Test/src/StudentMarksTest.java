@@ -10,7 +10,7 @@ public class StudentMarksTest{
     void test1(){
         String actual = Student.check_activities(11);
         String expected = Student.ERROR_ACTIVITES_MARK;
-        assertEquals(actual, expected,actual);        
+        assertEquals(actual,expected,actual);        
     }
 
     @Test
