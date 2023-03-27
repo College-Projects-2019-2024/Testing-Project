@@ -32,12 +32,15 @@ public class Subject {
                     if (line != null) {
 
                         Student current = new Student(line);
-                        if(current.testStudent() != ""){
+                        if(!current.testStudent().equals("")){
                             System.out.println("Student "+ i + ": ");
                             System.out.print(current.testStudent());
                         }
+                        else{
+                            students.add(current);
+                        }
             
-                        students.add(current);
+                        
                         
                         
                     
@@ -46,7 +49,7 @@ public class Subject {
                 }
 
             }
-
+        
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
