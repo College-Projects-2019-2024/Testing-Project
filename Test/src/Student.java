@@ -8,11 +8,19 @@ public class Student {
     private int oral_practicalMark;
     private int midtermMark;
     private int finalMark;
-    int sum;
-    String STRING_EMPTY = "Error: Student is empty.";
-    String STUDENT_NAME_SPACE = "Error: Student name starts with a space.";
-    String STUDENT_NAME_INVALID = "Error: Input must consist of Alphabetic characters and Spaces.";
- 
+    private int sum;
+    final static String STRING_EMPTY = "Error: Student is empty.\n";
+    final static String STUDENT_NAME_SPACE = "Error: Student name starts with a space.\n";
+    final static String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.\n";
+    final static String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.\n";
+    final static String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.\n";
+    final static String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.\n";
+    final static String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.\n";
+    final static String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.\n";
+    final static String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.\n";
+    final static String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.\n";
+    final static String ERROR_SUM = "Error: the sum of marks must be a positive number between 0 and 100.\n";
+    final static int    ERROR_GPA = -1;
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -26,7 +34,7 @@ public class Student {
 
     }
 
-    double calculateGPA() {
+    static double calculateGPA(int sum) {
         if (sum >= 93)
             return 4.0;
         else if (sum >= 90 && sum < 93)
@@ -47,10 +55,13 @@ public class Student {
             return 1.3;
         else if (sum >= 60 && sum < 64)
             return 1.0;
-        else
+        else if(sum<60 && sum>0)
             return 0;
+        else return ERROR_GPA;
+
+        
     }
-    String calculateGrade() {
+    static String calculateGrade(int sum) {
         if (sum >= 97)
             return "A+";
         else if (sum >= 93 && sum < 97)
@@ -73,8 +84,9 @@ public class Student {
             return "D+";
         else if (sum >= 60 && sum < 64)
             return "D";
-        else
+        else if(sum<60 && sum>0)
             return "F";
+        else return ERROR_SUM;
     }
     String getName()
     {
@@ -85,18 +97,83 @@ public class Student {
     {
         return number;
     }
+
+    int getSum()
+    {
+        return sum;
+    }
     
-    String checkStudentName()
+    static String checkStudentName(String s)
     {   
-        if(name.length()==0) return STRING_EMPTY;
-        if(name.charAt(0)==' ') return STUDENT_NAME_SPACE;
-        for(char c : name.toCharArray())
+        if(s.length()==0) return STRING_EMPTY;
+        if(s.charAt(0)==' ') return STUDENT_NAME_SPACE;
+        for(char c : s.toCharArray())
         {
            if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
                 return STUDENT_NAME_INVALID;
-           
         }
         return "";              
+    }
+    
+    static String checkStudentNumber(String s)
+    {
+        if(s.length()!=8) return STUDENT_NUMBER_INVALID_LENGTH;
+        
+        for(int i = 0; i<7; i++)
+        {
+            if(!Character.isDigit(s.charAt(i)))
+            
+             return STUDENT_NUMBER_CONTAIN;
+              
+        }
+        if(!Character.isAlphabetic(s.charAt(s.length()-1)) && !Character.isDigit(s.charAt(s.length()-1)))
+        
+        return STUDENT_NUMBER_END;
+    
+        return "";   
+    }
+    static String check_activities(int activitiesMark)
+    {
+        String result = "";
+        if(activitiesMark<0 || activitiesMark>10)  result=ERROR_ACTIVITES_MARK;
+        return result;
+    }
+    static String check_oral(int oralMark)
+    {
+        String result = "";
+        
+        if(oralMark<0 || oralMark>10) result= ERROR_ORAL_MARK;
+       
+        return result;
+    }
+    static String check_midterm(int midtermMark)
+    {
+        String result = "";
+        
+        if(midtermMark<0 || midtermMark>20) result=ERROR_MIDTERM_MARK;
+        
+        
+        return result;
+    }
+    static String check_final(int finalMark)
+    {
+        String result = "";
+        
+        if(finalMark<0 || finalMark>60) result+=ERROR_FINAL_MARK;
+        return result;
+    }
+
+    String testStudent(){
+        String result = "";
+        result+=checkStudentName(name);
+        result+=checkStudentNumber(number);
+        result+=check_activities(activitiesMark);
+        result+=check_final(finalMark);
+        result+=check_oral(oral_practicalMark);
+        result+=check_midterm(midtermMark);
+
+        return result;
+
     }
 
      

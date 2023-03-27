@@ -32,15 +32,20 @@ public class Subject {
                     if (line != null) {
 
                         Student current = new Student(line);
-                        System.out.println(current.checkStudentName());
-                        students.add(current);
+                        if(!current.testStudent().equals("")){
+                            System.out.println("Student "+ i + ": ");
+                            System.out.print(current.testStudent());
+                        }
+                        else{
+                            students.add(current);
+                        } 
                     
                     }
 
                 }
 
             }
-
+        
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,8 +67,8 @@ public class Subject {
             for(int i = 0; i<sub.students.size(); i++){
                 writebuff.write(sub.students.get(i).getName()+"\t" );
                 writebuff.write(sub.students.get(i).getStudentNumber()+"\t" );
-                double x = sub.students.get(i).calculateGPA();
-                String s = sub.students.get(i).calculateGrade();
+                double x = Student.calculateGPA(sub.students.get(i).getSum());
+                String s = Student.calculateGrade(sub.students.get(i).getSum());
                 writebuff.write(x+"\t"+"\t");
                 writebuff.write(s);
                 writebuff.write("\n");
