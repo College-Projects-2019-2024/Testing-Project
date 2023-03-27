@@ -109,6 +109,7 @@ public class StudentGPATest{
         
     }
 
+    //negative sum
     @Test
     void test13(){
         double expected = Student.ERROR_GPA;

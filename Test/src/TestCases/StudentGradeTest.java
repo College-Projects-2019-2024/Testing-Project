@@ -104,6 +104,7 @@ public class StudentGradeTest{
         
     }
 
+    //negative sum
     @Test
     void test13(){
         String expected = Student.ERROR_SUM;

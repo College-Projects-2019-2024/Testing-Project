@@ -17,14 +17,8 @@ public class StudentNumberTest{
     
     
 
-    //each test case will be on the first student just for illustration
-
-    //all the tests outputs the exact error with exact number of student which has the error
-
-
-
-
     @Test
+    
     //if student number is not of length 8
     void test1(){
         String expected = STUDENT_NUMBER_INVALID_LENGTH ;
