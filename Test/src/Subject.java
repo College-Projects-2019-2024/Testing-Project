@@ -38,11 +38,7 @@ public class Subject {
                         }
                         else{
                             students.add(current);
-                        }
-            
-                        
-                        
-                        
+                        } 
                     
                     }
 
@@ -71,8 +67,8 @@ public class Subject {
             for(int i = 0; i<sub.students.size(); i++){
                 writebuff.write(sub.students.get(i).getName()+"\t" );
                 writebuff.write(sub.students.get(i).getStudentNumber()+"\t" );
-                double x = sub.students.get(i).calculateGPA();
-                String s = sub.students.get(i).calculateGrade();
+                double x = Student.calculateGPA(sub.students.get(i).getSum());
+                String s = Student.calculateGrade(sub.students.get(i).getSum());
                 writebuff.write(x+"\t"+"\t");
                 writebuff.write(s);
                 writebuff.write("\n");

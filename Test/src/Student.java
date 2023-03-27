@@ -8,7 +8,7 @@ public class Student {
     private int oral_practicalMark;
     private int midtermMark;
     private int finalMark;
-    int sum;
+    private int sum;
     final static String STRING_EMPTY = "Error: Student is empty.\n";
     final static String STUDENT_NAME_SPACE = "Error: Student name starts with a space.\n";
     final static String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.\n";
@@ -19,6 +19,8 @@ public class Student {
     final static String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.\n";
     final static String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.\n";
     final static String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.\n";
+    final static String ERROR_SUM = "Error: the sum of marks must be a positive number between 0 and 100.\n";
+    final static int    ERROR_GPA = -1;
 
     Student(String s) {
         String[] attr = s.split(",");
@@ -32,7 +34,7 @@ public class Student {
 
     }
 
-    double calculateGPA() {
+    static double calculateGPA(int sum) {
         if (sum >= 93)
             return 4.0;
         else if (sum >= 90 && sum < 93)
@@ -53,10 +55,13 @@ public class Student {
             return 1.3;
         else if (sum >= 60 && sum < 64)
             return 1.0;
-        else
+        else if(sum<60 && sum>0)
             return 0;
+        else return ERROR_GPA;
+
+        
     }
-    String calculateGrade() {
+    static String calculateGrade(int sum) {
         if (sum >= 97)
             return "A+";
         else if (sum >= 93 && sum < 97)
@@ -79,8 +84,9 @@ public class Student {
             return "D+";
         else if (sum >= 60 && sum < 64)
             return "D";
-        else
+        else if(sum<60 && sum>0)
             return "F";
+        else return ERROR_SUM;
     }
     String getName()
     {
@@ -90,6 +96,11 @@ public class Student {
     String getStudentNumber()
     {
         return number;
+    }
+
+    int getSum()
+    {
+        return sum;
     }
     
     static String checkStudentName(String s)
@@ -103,7 +114,7 @@ public class Student {
         }
         return "";              
     }
-    //TODO()
+    
     static String checkStudentNumber(String s)
     {
         if(s.length()!=8) return STUDENT_NUMBER_INVALID_LENGTH;
