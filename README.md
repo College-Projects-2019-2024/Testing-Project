@@ -15,14 +15,10 @@ If you want contribute to this project or report a bug, please open an issue on 
 
 ## Credits
 This project was developed by:
-
-Mark Ashraf William 1900156
-
-Mohamed Ahmed Samir 1900969 
-
-Marco Sherif Magdy  1900285 
-
-Hossam el din adel  1900969 
+Mark Ashraf William 1900156<br />
+Mohamed Ahmed Samir 1900969<br />
+Marco Sherif Magdy  1900285<br /> 
+Hossam el din adel  1900969<br /> 
 
 as a part of a Software Testing Assignment.
 
