@@ -1,6 +1,10 @@
+package TestCases;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
+
+import Main.Student;
+import Main.Subject;
 
 
 public class StudentNumberTest{
