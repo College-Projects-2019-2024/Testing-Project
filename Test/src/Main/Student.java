@@ -16,7 +16,7 @@ public class Student {
     public final static String STUDENT_NUMBER_CONTAIN = "Error: student number must be all digits until the last character.\n";
     public final static String STUDENT_NUMBER_END = "Error: student number must end with an alphabet/digit.\n";
     public final static String STUDENT_NUMBER_INVALID_LENGTH = "Error: student number length must be 8 characters.\n";
-    public final static String ERROR_ACTIVITES_MARK = "Error: activites mark must be an integer from 1 to 10 of the full mark.\n";
+    public final static String ERROR_ACTIVITES_MARK = "Error: activities mark must be an integer from 1 to 10 of the full mark.\n";
     public final static String ERROR_MIDTERM_MARK = "Error: midterm mark must be an integer from 1 to 20 of the full mark.\n";
     public final static String ERROR_ORAL_MARK = "Error: Oral/Practical mark must be an integer from 1 to 10 of the full mark.\n";
     public final static String ERROR_FINAL_MARK = "Error: final exam mark must be an integer from 1 to 60 from the full mark.\n";
