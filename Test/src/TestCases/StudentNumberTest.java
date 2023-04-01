@@ -51,9 +51,10 @@ public class StudentNumberTest{
         
     }
 
+    @Test
     //correct number
     void test4(){
-        String expected = STUDENT_NUMBER_END ;
+        String expected = "" ;
         String actual = Student.checkStudentNumber("12345678");
         
         assertEquals(actual, expected, actual);
