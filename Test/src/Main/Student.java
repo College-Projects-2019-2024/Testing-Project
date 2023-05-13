@@ -102,6 +102,23 @@ public class Student {
         return number;
     }
 
+    public int getActivitiesMark()
+    {
+        return activitiesMark;
+    }
+    public int getOral_practicalMark()
+    {
+        return oral_practicalMark;
+    }
+    public int getMidtermMark()
+    {
+        return midtermMark;
+    }
+    public int getFinalMark()
+    {
+        return finalMark;
+    }
+
     public int getSum()
     {
         return sum;
@@ -166,7 +183,7 @@ public class Student {
         return result;
     }
 
-    public  String checkStudent(){
+    public  String checkStudentData(){
         String result = "";
         result+=checkStudentName(name);
         result+=checkStudentNumber(number);
@@ -179,7 +196,7 @@ public class Student {
 
     }
     
-    public static  String checkStudent(String name,String number,int activitiesMark,int oral_practicalMark,int midtermMark,int finalMark){
+    public static  String checkStudentData(String name,String number,int activitiesMark,int oral_practicalMark,int midtermMark,int finalMark){
         String result = "";
         result+=checkStudentName(name);
         result+=checkStudentNumber(number);

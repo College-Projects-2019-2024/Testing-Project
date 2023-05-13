@@ -27,9 +27,9 @@ public class fileIO {
                 else {
                     if (line != null) {
                         Student current = new Student(line);
-                        if(!current.checkStudent().equals("")){
+                        if(!current.checkStudentData().equals("")){
                             System.out.println("Student "+ i + ": ");
-                            System.out.print(current.checkStudent());
+                            System.out.print(current.checkStudentData());
                         }
                         else{
                             subb.students.add(current);
