@@ -178,6 +178,19 @@ public class Student {
         return result;
 
     }
+    
+    public static  String checkStudent(String name,String number,int activitiesMark,int oral_practicalMark,int midtermMark,int finalMark){
+        String result = "";
+        result+=checkStudentName(name);
+        result+=checkStudentNumber(number);
+        result+=check_activities(activitiesMark);
+        result+=check_final(finalMark);
+        result+=check_oral(oral_practicalMark);
+        result+=check_midterm(midtermMark);
+
+        return result;
+
+    }
 
      
 }
