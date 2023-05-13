@@ -27,6 +27,13 @@ public class Subject {
         fullMark = Integer.valueOf(attr[2]);
     }
 
+    public Subject(String name, String code, int fullMark)
+    {
+        this.name = name;
+        this.code = code;
+        this.fullMark = fullMark;
+    }
+
 
     public static String checkSubjectName(String s)
     {   
@@ -63,15 +70,30 @@ public class Subject {
         else return "";  
     }
 
+    public String getName() {
+        return name;
+    }
 
-    public  String checkSubject ()
+    public String getCode() {
+        return code;
+    }
+
+    public int getFullMark() {
+        return fullMark;
+    }
+
+    public String checkSubject()
     {
         String result = "";
         result += checkSubjectCode(code);
-        result+=checkSubjectName(name);
-        result+=checkMaxDegree(fullMark);
+        result += checkSubjectName(name);
+        result += checkMaxDegree(fullMark);
         return result;
     }
+
+
+
+
 
 
     public static String checkSubject(String name, String code, int fullMark)
