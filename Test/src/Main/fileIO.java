@@ -25,7 +25,8 @@ public class fileIO {
                     
                 } 
                 else {
-                    if (line != null) {
+
+                    if (line != null && line !="" && line !="\n" && line.length()>0) {
                         Student current = new Student(line);
                         if(!current.checkStudentData().equals("")){
                             System.out.println("Student "+ i + ": ");

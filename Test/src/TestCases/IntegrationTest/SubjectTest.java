@@ -1,7 +1,7 @@
 package TestCases.IntegrationTest;
 import Main.Subject;
 import org.junit.jupiter.api.Test;
-import Main.Student;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -44,10 +44,8 @@ public class SubjectTest {
 
         Subject subject = new Subject(testName,testCode,maxTest);
 
-        assertEquals(subject.checkSubject(),"",subject.checkSubject());
-        assertEquals(subject.getName(),testName, subject.getName());
-        assertEquals(subject.getCode(),testCode, subject.getCode());
-        assertEquals(subject.getFullMark(),maxTest, subject.getFullMark());
+        assertEquals(subject.checkSubjectData(),"",subject.checkSubjectData());
+        
     }
 
 

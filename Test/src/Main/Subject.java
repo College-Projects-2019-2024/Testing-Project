@@ -82,7 +82,7 @@ public class Subject {
         return fullMark;
     }
 
-    public String checkSubject()
+    public String checkSubjectData()
     {
         String result = "";
         result += checkSubjectCode(code);
@@ -96,7 +96,7 @@ public class Subject {
 
 
 
-    public static String checkSubject(String name, String code, int fullMark)
+    public static String checkSubjectData(String name, String code, int fullMark)
     {
         String result = "";
         result += checkSubjectCode(code);
