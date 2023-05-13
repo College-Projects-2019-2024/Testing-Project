@@ -7,7 +7,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class Subject {
-    //TODO()
+    
     public static final String ERROR_MAX_DEGREE = "Error: Max degree must be one of the following values: 100.\n";
     public final static String STRING_EMPTY = "Error: Subject Name is empty.\n";
     public final static String SUBJECT_NAME_SPACE = "Error: Subject name starts with a space.\n";

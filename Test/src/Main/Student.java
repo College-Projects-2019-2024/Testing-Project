@@ -10,6 +10,7 @@ public class Student {
     private int midtermMark;
     private int finalMark;
     private int sum;
+    
     public final static String STRING_EMPTY = "Error: Student is empty.\n";
     public final static String STUDENT_NAME_SPACE = "Error: Student name starts with a space.\n";
     public final static String STUDENT_NAME_INVALID = "Error: Student name must consist of alphabetic characters and spaces.\n";
@@ -89,6 +90,7 @@ public class Student {
             return "F";
         else return ERROR_SUM;
     }
+
     public String getName()
     {
         return name;
@@ -115,7 +117,6 @@ public class Student {
         }
         return "";              
     }
-    
     public static String checkStudentNumber(String s)
     {
         if(s.length()!=8) return STUDENT_NUMBER_INVALID_LENGTH;
