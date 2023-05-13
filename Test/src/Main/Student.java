@@ -166,7 +166,7 @@ public class Student {
         return result;
     }
 
-    public  String testStudent(){
+    public  String checkStudent(){
         String result = "";
         result+=checkStudentName(name);
         result+=checkStudentNumber(number);
