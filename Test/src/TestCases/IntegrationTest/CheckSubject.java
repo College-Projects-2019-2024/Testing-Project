@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import Main.Subject;
 import org.junit.jupiter.api.Test;
 import Main.Student;
+
 public class CheckSubject {
 
     @Test
@@ -30,8 +31,6 @@ public class CheckSubject {
         String actual = Subject.checkSubject(" BAD","CSE333",100);
         assertEquals(actual,expected, actual);
     }
-
-
 
 
 
