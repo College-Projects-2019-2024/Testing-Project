@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import Main.Student;
 
-public class CheckStudent {
+public class CheckStudentData {
     
     //correct student
     @Test
@@ -13,7 +13,7 @@ public class CheckStudent {
 
 
         String expected = "";
-        String actual = Student.checkStudent("Mostafa","12345678",10,9,15,57);
+        String actual = Student.checkStudentData("Mostafa","12345678",10,9,15,57);
 
         assertEquals(actual, expected, actual);
     }
@@ -23,7 +23,7 @@ public class CheckStudent {
     void test2(){
 
         String expected = Student.STUDENT_NUMBER_CONTAIN;
-        String actual = Student.checkStudent("Mostafa","123ty678",10,9,15,57);
+        String actual = Student.checkStudentData("Mostafa","123ty678",10,9,15,57);
 
         assertEquals(actual, expected, actual);
     }
@@ -33,7 +33,7 @@ public class CheckStudent {
     void test3(){
 
         String expected = Student.STUDENT_NUMBER_CONTAIN + Student.ERROR_FINAL_MARK;
-        String actual = Student.checkStudent("Mostafa","123ty678",10,9,15,68);
+        String actual = Student.checkStudentData("Mostafa","123ty678",10,9,15,68);
 
         assertEquals(actual, expected, actual);
     }
@@ -46,7 +46,7 @@ public class CheckStudent {
         String expected = Student.ERROR_ACTIVITES_MARK + Student.ERROR_FINAL_MARK +
                             Student.ERROR_ORAL_MARK+ Student.ERROR_MIDTERM_MARK;
 
-        String actual = Student.checkStudent("Mostafa","12345678",14,16,30,68);
+        String actual = Student.checkStudentData("Mostafa","12345678",14,16,30,68);
 
         assertEquals(actual, expected, actual);
     }
