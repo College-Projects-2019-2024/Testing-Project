@@ -64,12 +64,22 @@ public class Subject {
     }
 
 
-    public static String checkSubject(Subject input)
+    public  String checkSubject ()
     {
         String result = "";
-        result += checkSubjectCode(input.code);
-        result+=checkSubjectName(input.name);
-        result+=checkMaxDegree(input.fullMark);
+        result += checkSubjectCode(code);
+        result+=checkSubjectName(name);
+        result+=checkMaxDegree(fullMark);
+        return result;
+    }
+
+
+    public static String checkSubject(String name, String code, int fullMark)
+    {
+        String result = "";
+        result += checkSubjectCode(name);
+        result+=checkSubjectName(name);
+        result+=checkMaxDegree(fullMark);
         return result;
     }
 
