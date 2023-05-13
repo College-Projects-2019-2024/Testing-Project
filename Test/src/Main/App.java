@@ -5,7 +5,7 @@ public class App {
 
         fileIO file = new fileIO();
 
-        Subject sub = file.readFile("D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\Samplle.txt");
+        Subject sub = file.readFile("Test\\Samplle.txt");
         
         file.writeFile(sub);
         
