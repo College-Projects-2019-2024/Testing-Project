@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 import Main.Subject;
 import org.junit.jupiter.api.Test;
-import Main.Student;
+
 
 public class CheckSubjectData {
 
