@@ -28,7 +28,7 @@ public class ReadFileTest {
     @Test
     public void test1(){
         String filename = "Test\\wrongfilename.txt";
-        Subject sub = file.readFile(filename);
+        file.readFile(filename);
 
         String expected = "Invalid file name, file was not open";
         String actual = out.toString();
