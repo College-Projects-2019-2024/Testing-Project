@@ -82,6 +82,10 @@ public class Subject {
         return fullMark;
     }
 
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
+
     public String checkSubjectData()
     {
         String result = "";

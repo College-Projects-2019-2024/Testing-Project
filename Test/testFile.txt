@@ -1,0 +1,3 @@
+software testing,CSE333,100
+
+Samirrrr,1234h678,10,10,20,60

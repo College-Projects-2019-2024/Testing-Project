@@ -44,7 +44,7 @@ public class fileIO {
         
             reader.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.print("Invalid file name, file was not open");
         }
 
         return subb;
