@@ -48,7 +48,6 @@ public class ReadFileTest {
         assertEquals("Error in test 2", "CSE333",sub.getCode());
         assertEquals("Error in test 2", 100,sub.getFullMark());
 
-    
     }
 
     //the file is read and there was an error in a student
