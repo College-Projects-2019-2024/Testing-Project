@@ -15,7 +15,6 @@ public class fileIO {
         try {
             reader = new BufferedReader(new FileReader(filename));
             String line = "x";
-
             for (int i = 0; line != null; i++) {
                 line = reader.readLine();
 
