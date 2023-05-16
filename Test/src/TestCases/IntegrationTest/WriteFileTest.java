@@ -173,7 +173,7 @@ public class WriteFileTest {
             }
         }
 
-
+        reader.close();
     }
 }
 
