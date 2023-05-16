@@ -34,8 +34,25 @@ public class Student {
         midtermMark = Integer.valueOf(attr[4]);
         finalMark = Integer.valueOf(attr[5]);
         sum = activitiesMark + oral_practicalMark + midtermMark + finalMark;
-
     }
+
+    public Student(String name,String number,int activitiesMark,int oral_practicalMark,int midtermMark,int finalMark) {
+
+        this.name = name;
+        this.number = number;
+        this.activitiesMark = activitiesMark;
+        this.oral_practicalMark = oral_practicalMark;
+        this.midtermMark = midtermMark;
+        this.finalMark = finalMark;
+        sum = activitiesMark + oral_practicalMark + midtermMark + finalMark;
+    }
+
+
+
+
+
+
+
 
     public static double calculateGPA(int sum) {
         if (sum >= 93)

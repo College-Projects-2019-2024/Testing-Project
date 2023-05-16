@@ -25,6 +25,7 @@ public class Subject {
         name = attr[0];
         code = attr[1];
         fullMark = Integer.valueOf(attr[2]);
+        students = new ArrayList<>();
     }
 
     public Subject(String name, String code, int fullMark)
@@ -32,6 +33,7 @@ public class Subject {
         this.name = name;
         this.code = code;
         this.fullMark = fullMark;
+        students = new ArrayList<>();
     }
 
 
@@ -94,11 +96,10 @@ public class Subject {
         result += checkMaxDegree(fullMark);
         return result;
     }
-
-
-
-
-
+    public void addStudent(Student s)
+    {
+        students.add(s);
+    }
 
     public static String checkSubjectData(String name, String code, int fullMark)
     {
