@@ -1,16 +1,13 @@
 package Main;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 
 public class fileIO {
-    Subject subb;
+
     
-    public Subject readFile(String filename){
+    public static Subject readFile(String filename){
         BufferedReader reader;
+        Subject subb = null;
 
         try {
             reader = new BufferedReader(new FileReader(filename));
@@ -21,8 +18,8 @@ public class fileIO {
                 if (i == 0) {
                     subb = new Subject(line);
                     subb.students = new ArrayList<Student>();
-                    
-                } 
+                }
+
                 else {
 
                     if (line != null && line !="" && line !="\n" && line.length()>0) {
@@ -40,7 +37,6 @@ public class fileIO {
                 }
 
             }
-        
             reader.close();
         } catch (IOException e) {
             System.out.print("Invalid file name, file was not open");
@@ -51,23 +47,22 @@ public class fileIO {
     }
 
 
-    public void writeFile(Subject sub){
-        FileWriter file;
+    public static void writeFile(Subject sub) throws FileNotFoundException {
+        FileWriter file = null;
         try{
             file = new FileWriter("output.txt");
             BufferedWriter writebuff = new BufferedWriter(file);
-
-            writebuff.write("Subject name: " + sub.name +"\t" +"\t");
-            writebuff.write("Max mark: " + sub.fullMark);
-            writebuff.write("\n");
-            writebuff.write("\n");
+            writebuff.write("Subject name: " + sub.name +" Max mark: " + sub.fullMark + "\n");
+            writebuff.write("Student name Student number GPA Grade\n");
 
             for(int i = 0; i<sub.students.size(); i++){
-                writebuff.write(sub.students.get(i).getName()+"\t" );
-                writebuff.write(sub.students.get(i).getStudentNumber()+"\t" );
+                writebuff.write(sub.students.get(i).getName()+" " );
+                writebuff.write(sub.students.get(i).getStudentNumber()+" " );
+
                 double x = Student.calculateGPA(sub.students.get(i).getSum());
                 String s = Student.calculateGrade(sub.students.get(i).getSum());
-                writebuff.write(x+"\t"+"\t");
+
+                writebuff.write(x+" ");
                 writebuff.write(s);
                 writebuff.write("\n");
 
@@ -77,5 +72,6 @@ public class fileIO {
         }catch(IOException except){
             except.printStackTrace();
         }
+
     }
 }
