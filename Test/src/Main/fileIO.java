@@ -14,8 +14,12 @@ public class fileIO {
             String line = "x";
             for (int i = 0; line != null; i++) {
                 line = reader.readLine();
-
+                
                 if (i == 0) {
+                    if(line == null || line =="" || line =="\n" ){
+                        reader.close();
+                        return null;
+                    }
                     subb = new Subject(line);
                     subb.students = new ArrayList<Student>();
                 }
@@ -52,23 +56,30 @@ public class fileIO {
         try{
             file = new FileWriter("output.txt");
             BufferedWriter writebuff = new BufferedWriter(file);
-            writebuff.write("Subject name: " + sub.name +" Max mark: " + sub.fullMark + "\n");
-            writebuff.write("Student name Student number GPA Grade\n");
-
-            for(int i = 0; i<sub.students.size(); i++){
-                writebuff.write(sub.students.get(i).getName()+" " );
-                writebuff.write(sub.students.get(i).getStudentNumber()+" " );
-
-                double x = Student.calculateGPA(sub.students.get(i).getSum());
-                String s = Student.calculateGrade(sub.students.get(i).getSum());
-
-                writebuff.write(x+" ");
-                writebuff.write(s);
-                writebuff.write("\n");
-
+            writebuff.write("Subject name: " + sub.name +",  Max mark: " + sub.fullMark + "\n");
+            
+            if(sub.students.size() == 0){
+                writebuff.write("\nThere are no students\n");
+                writebuff.close();
             }
-
-            writebuff.close();
+            else{
+                writebuff.write("\nStudent name Student number GPA Grade\n");
+                for(int i = 0; i<sub.students.size(); i++){
+                    writebuff.write(sub.students.get(i).getName()+" " );
+                    writebuff.write(sub.students.get(i).getStudentNumber()+" " );
+    
+                    double x = Student.calculateGPA(sub.students.get(i).getSum());
+                    String s = Student.calculateGrade(sub.students.get(i).getSum());
+    
+                    writebuff.write(x+" ");
+                    writebuff.write(s);
+                    writebuff.write("\n");
+    
+                }
+    
+                writebuff.close();
+            }
+            
         }catch(IOException except){
             except.printStackTrace();
         }
