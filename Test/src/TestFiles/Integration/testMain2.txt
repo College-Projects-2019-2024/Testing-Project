@@ -1,0 +1,3 @@
+Very Long Course Name,ABC123,100
+Long Student Name,12345678,7,8,18,55
+short,87654321,5,5,15,55

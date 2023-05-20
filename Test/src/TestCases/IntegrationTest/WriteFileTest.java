@@ -41,7 +41,6 @@ public class WriteFileTest {
         String line = "x";
         String actualSubName = null, actualMaxMark = null;
 
-
         for (int i = 0; line != null; i++) {
             line = reader.readLine();
             String actualName = "";
@@ -127,33 +126,19 @@ public class WriteFileTest {
             String actualCode = "";
             String actualGPA = "";
             String actualGrade = "";
-            if (i == 0) {
+
+            if (i == 0)
+            {
                 actualSubName = line.substring(line.indexOf(':') + 2, line.indexOf("Max mark") - 1);
                 actualMaxMark = line.substring(line.lastIndexOf(':') + 2);
                 assertEquals(subName, actualSubName);
                 assertEquals(subFM, actualMaxMark);
 
-            } else if (i == 1) {
-                assertEquals("Student name Student number GPA Grade", line);
-            } else if (i == 2) {
-                String[] current = line.split(" ");
-                for (String s : current) {
-                    if (Character.isAlphabetic(s.charAt(0))) {
-                        actualName += s;
-                        actualName += " ";
-                    } else break;
-                }
-                actualName = actualName.substring(0, actualName.length() - 1);
-                actualCode = line.substring(line.indexOf(actualName) + actualName.length() + 1, line.indexOf(actualName) + actualName.length() + 9);
-                actualGPA += line.substring(line.indexOf(actualCode) + actualCode.length() + 1, line.lastIndexOf(' '));
-                actualGrade += line.substring(line.lastIndexOf(' ') + 1);
+            }
+            else if (i == 1) assertEquals("Student name Student number GPA Grade", line);
 
-                assertEquals(s1_name, actualName);
-                assertEquals(s1_num, actualCode);
-                int sum = s1_am + s1_mt + s1_fm + s1_pm;
-                Assertions.assertEquals(Student.calculateGPA(sum), Double.parseDouble(actualGPA), 0);
-                assertEquals(Student.calculateGrade(sum), actualGrade);
-            } else if (i == 3) {
+
+            else if (i == 2) {
                 String[] current = line.split(" ");
                 for (String s : current) {
                     if (Character.isAlphabetic(s.charAt(0))) actualName += s + " ";
@@ -163,10 +148,33 @@ public class WriteFileTest {
                 actualCode = line.substring(line.indexOf(actualName) + actualName.length() + 1, line.indexOf(actualName) + actualName.length() + 9);
                 actualGPA += line.substring(line.indexOf(actualCode) + actualCode.length() + 1, line.lastIndexOf(' '));
                 actualGrade += line.substring(line.lastIndexOf(' ') + 1);
+                int sum = s1_am + s1_mt + s1_fm + s1_pm;
+
+                
+
+                assertEquals(s1_name, actualName);
+                assertEquals(s1_num, actualCode);
+                Assertions.assertEquals(Student.calculateGPA(sum), Double.parseDouble(actualGPA), 0);
+                assertEquals(Student.calculateGrade(sum), actualGrade);
+            }
+
+
+
+            else if (i == 3) {
+                String[] current = line.split(" ");
+                for (String s : current) {
+                    if (Character.isAlphabetic(s.charAt(0))) actualName += s + " ";
+                    else break;
+                }
+                actualName = actualName.substring(0, actualName.length() - 1);
+                actualCode = line.substring(line.indexOf(actualName) + actualName.length() + 1, line.indexOf(actualName) + actualName.length() + 9);
+                actualGPA += line.substring(line.indexOf(actualCode) + actualCode.length() + 1, line.lastIndexOf(' '));
+                actualGrade += line.substring(line.lastIndexOf(' ') + 1);
+                int sum = s2_am + s2_mt + s2_fm + s2_pm;
+
 
                 assertEquals(s2_name, actualName);
                 assertEquals(s2_num, actualCode);
-                int sum = s2_am + s2_mt + s2_fm + s2_pm;
                 Assertions.assertEquals(Student.calculateGPA(sum), Double.parseDouble(actualGPA), 0);
                 assertEquals(Student.calculateGrade(sum), actualGrade);
             }
