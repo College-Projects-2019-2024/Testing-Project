@@ -1,12 +1,12 @@
 package TestCases.IntegrationTest;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 
 import Main.Student;
-import Main.Subject;
-import Main.fileIO;
+
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
