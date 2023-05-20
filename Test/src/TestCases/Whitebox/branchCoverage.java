@@ -7,9 +7,7 @@ import Main.Student;
 public class branchCoverage {
     
    //each test case number corresponds to its number in the pdf
-
     @Test
-    
     void test1(){
         double expected = 4.0;
         double actual = Student.calculateGPA(95);
@@ -17,7 +15,6 @@ public class branchCoverage {
     }
 
     @Test
-    
     void test2(){
         double expected = 3.7;
         double actual = Student.calculateGPA(90);
