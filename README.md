@@ -1,6 +1,12 @@
 # Testing Project
 This project focuses on testing the functionality of a software system that handles the degrees of students. It includes a set of JUnit test cases to ensure that the software system calculates the correct degree.
 
+## Important note
+In the test cases that reads from a file, the number of the test file that the test case reads from is the same as the test case number and there is a directory of test files for each test technique (Data flow, white box, black box, integration).
+
+## Source code
+Test -> src
+
 ## Requirements
 Java 1.8 or higher
 JUnit 4.13 or higher

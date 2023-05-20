@@ -8,7 +8,7 @@ import Main.fileIO;
 public class All_Def {
     @Test
     public void test1(){
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\testFile1.txt";
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile1.txt";
         Subject sub = fileIO.readFile(filename);
 
         assertEquals("Error in test 1", "software testing",sub.getName());

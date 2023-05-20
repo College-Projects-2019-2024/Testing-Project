@@ -14,8 +14,7 @@ import java.io.PrintStream;
 public class ReadFileTest {
     private ByteArrayOutputStream out;
     Subject sub;
-    fileIO file = new fileIO();
-
+    
     @BeforeEach
     void Init() {
         out = new ByteArrayOutputStream();
@@ -28,9 +27,9 @@ public class ReadFileTest {
     @Test
     public void test1(){
         String filename = "Test\\wrongfilename.txt";
-        file.readFile(filename);
+        sub = fileIO.readFile(filename);
 
-        String expected = "Invalid file name, file was not open";
+        String expected = "Invalid file name, file was not open\nFile is empty";
         String actual = out.toString();
 
         assertEquals(actual, expected, actual);
@@ -41,8 +40,8 @@ public class ReadFileTest {
     @Test
     public void test2(){
 
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\testFile.txt";
-        sub = file.readFile(filename);
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile2.txt";
+        sub = fileIO.readFile(filename);
 
         assertEquals("Error in test 2", "software testing",sub.getName());
         assertEquals("Error in test 2", "CSE333",sub.getCode());
@@ -55,16 +54,61 @@ public class ReadFileTest {
     @Test
     public void test3(){
 
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\testFile.txt";
-        sub = file.readFile(filename);
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile3.txt";
+        sub = fileIO.readFile(filename);
 
         int expected = 0;
         int actual = sub.getStudents().size();
 
         assertEquals("Error in test 3", expected,actual);
         
+    
+    }
+
+    //if subject data was not in the first line
+    @Test
+    public void test4(){
+
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile4.txt";
+        sub = fileIO.readFile(filename);
+
+        String expected = "No subject data\nSubject data must be in first line";
+        String actual = out.toString();
+
+        assertEquals("Error in test 4", expected,actual);
+        
+    }
+
+    //Empty file
+    @Test
+    public void test5(){
+
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile5.txt";
+        sub = fileIO.readFile(filename);
+
+        String expected = "File is empty";
+        String actual = out.toString();
+
+        assertEquals("Error in test 5", expected,actual);
+        
+    }
+
+    //All file data is correct
+    @Test
+    public void test6(){
+
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile6.txt";
+        sub = fileIO.readFile(filename);
+
         
 
-    
+        assertEquals("Error in test 2", "Software testing",sub.getName());
+        assertEquals("Error in test 2", "CSE333",sub.getCode());
+        assertEquals("Error in test 2", 100,sub.getFullMark());
+
+        int expected = 3;
+        int actual = sub.getStudents().size();
+        assertEquals("Error in test 6", expected,actual);
+        
     }
 }

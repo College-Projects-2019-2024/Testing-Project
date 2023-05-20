@@ -72,7 +72,7 @@ public class fileIO {
             reader.close();
             
         } catch (IOException e) {
-            System.out.print("Invalid file name, file was not open");
+            System.out.print("Invalid file name, file was not open\n");
         }
 
         //if it is null here then the for loop was not entered(empty file)

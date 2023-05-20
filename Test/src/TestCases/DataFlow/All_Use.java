@@ -23,7 +23,7 @@ public class All_Use {
     }
     @Test
     public void test1(){
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\testFile1.txt";
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile1.txt";
         Subject sub = fileIO.readFile(filename);
 
         assertEquals("Error in test 1", "software testing",sub.getName());
@@ -33,7 +33,7 @@ public class All_Use {
 
     @Test
     public void test2(){
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\testFile2.txt";
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile2.txt";
         Subject sub = fileIO.readFile(filename);
 
         assertEquals("Error in test 2", null,sub);
@@ -42,7 +42,7 @@ public class All_Use {
 
     @Test
     public void test3(){
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\testFile3.txt";
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile3.txt";
         Subject sub = fileIO.readFile(filename);
 
         String actual = out.toString();
@@ -53,7 +53,7 @@ public class All_Use {
 
     @Test
     public void test4(){
-        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\testFile4.txt";
+        String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile4.txt";
         Subject sub = fileIO.readFile(filename);
 
         //error in student so length of student array of the subject is zero
