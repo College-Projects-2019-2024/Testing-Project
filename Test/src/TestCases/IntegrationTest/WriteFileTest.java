@@ -15,7 +15,7 @@ import java.io.*;
 public class WriteFileTest {
     Subject subject;
 
-
+    // test that output data is the same as input data
     @Test
     void test1() throws IOException {
         String subName = "Networks Course", subCode = "CSE333";
@@ -93,7 +93,7 @@ public class WriteFileTest {
         }
         reader.close();
     }
-
+// check that the subject name and student name will be read correctly if they contain spaces
     @Test
     void test2() throws IOException {
         String subName = "Very Long Course Name", subCode = "ABC123";
