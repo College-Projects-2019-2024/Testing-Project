@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import Main.Student;
 
 public class StudentTest {
+    //test if data was placed correctly
     @Test
     public void test1(){
         Student st = new Student("Mohamed,12345678,10,10,19,59");
@@ -20,6 +21,7 @@ public class StudentTest {
 
     }
 
+    //call checkStudentData
     @Test
     public void test2(){
         Student st = new Student("Mohamed,12345678,10,10,19,59");

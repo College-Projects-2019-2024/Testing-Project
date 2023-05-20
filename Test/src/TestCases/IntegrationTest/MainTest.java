@@ -85,6 +85,7 @@ public class MainTest {
         }
         reader.close();
     }
+    
 
     @Test
     public void test2() throws IOException {
@@ -162,6 +163,9 @@ public class MainTest {
         }
         reader.close();
     }
+
+
+
     @Test
     public void test3() throws IOException {
         var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain3.txt"};
