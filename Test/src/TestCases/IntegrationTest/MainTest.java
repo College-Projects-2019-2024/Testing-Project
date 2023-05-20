@@ -45,9 +45,9 @@ public class MainTest {
                 assertEquals(subName, actualSubName);
                 assertEquals(subFM, actualMaxMark);
 
-            } else if (i == 1) {
-                assertEquals("Student name Student number GPA Grade", line);
             } else if (i == 2) {
+                assertEquals("Student_name Student_number GPA Grade", line);
+            } else if (i == 4) {
                 String[] current = line.split(" ");
                 for (String s : current) {
                     if (Character.isAlphabetic(s.charAt(0))) {
@@ -65,7 +65,7 @@ public class MainTest {
                 int sum = s1_am + s1_mt + s1_fm + s1_pm;
                 Assertions.assertEquals(Student.calculateGPA(sum), Double.parseDouble(actualGPA), 0);
                 assertEquals(Student.calculateGrade(sum), actualGrade);
-            } else if (i == 3) {
+            } else if (i == 5) {
                 String[] current = line.split(" ");
                 for (String s : current) {
                     if (Character.isAlphabetic(s.charAt(0))) actualName += s + " ";
