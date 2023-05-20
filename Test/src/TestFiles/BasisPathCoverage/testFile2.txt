@@ -1,0 +1,2 @@
+software testing,CSE333,100
+markk,12345679,10,10,19,60

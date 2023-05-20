@@ -1,0 +1,4 @@
+
+
+software testing,CSE333,100
+Samir,123hy678,10,10,20,80
