@@ -18,7 +18,7 @@ public class MainTest {
     
     @Test
     public void test1() throws IOException {
-        var x = new String[]{"Test\\src\\TestFiles\\Integration\\testMain1.txt"};
+        var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain1.txt"};
 
         App.main(x);
 
