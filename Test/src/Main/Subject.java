@@ -43,8 +43,10 @@ public class Subject {
         if(s.charAt(0)==' ') return SUBJECT_NAME_SPACE;
         for(char c : s.toCharArray())
         {
-           if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
-                return SUBJECT_NAME_INVALID;
+           if(!Character.isAlphabetic(c)){
+                if(c!=' ')return SUBJECT_NAME_INVALID;
+           }
+                
         }
         return "";              
     }

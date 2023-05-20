@@ -4,34 +4,62 @@ import java.util.ArrayList;
 
 public class fileIO {
 
-    
+    //function that opens the input file and returns the Subject object filled with data (if there is no errors)
     public static Subject readFile(String filename){
+        
         BufferedReader reader;
+        
+        //to be returned
         Subject subb = null;
 
         try {
             reader = new BufferedReader(new FileReader(filename));
-            String line = "x";
+            
+            //read a new line from the file
+            String line = reader.readLine();
+            
             for (int i = 0; line != null; i++) {
-                line = reader.readLine();
                 
+                //first line for subject
                 if (i == 0) {
-                    if(line == null || line =="" || line =="\n" ){
+                    //if there is no subject in the first line return null
+                    if(line.length()==0){
+                        System.out.print("No subject data\nSubject data must be in first line");
                         reader.close();
                         return null;
                     }
-                    subb = new Subject(line);
-                    subb.students = new ArrayList<Student>();
+
+                    else{
+                        subb = new Subject(line);
+                        //if subject data is correct continue and create a student array for it
+                        if(subb.checkSubjectData() == ""){
+                            subb.students = new ArrayList<Student>();
+                        }
+                        //if not correct return null
+                        else{
+                            System.out.print("Error in subject data\n");
+                            System.out.print(subb.checkSubjectData());
+                            reader.close();
+                            return null;
+                        }
+                        
+                    }
+                    
                 }
 
+                //the remaining lines in the file
                 else {
-
-                    if (line != null && line !="" && line !="\n" && line.length()>0) {
+                    //to avoid empty lines
+                    if (line.length()>0) {
                         Student current = new Student(line);
+
+                        //if student data is not correct
                         if(!current.checkStudentData().equals("")){
                             System.out.println("Student "+ i + ": ");
                             System.out.print(current.checkStudentData());
                         }
+
+                        //if correct add to array of students
                         else{
                             subb.students.add(current);
                         } 
@@ -39,14 +67,23 @@ public class fileIO {
                     }
 
                 }
-
+                line = reader.readLine();
             }
             reader.close();
+            
         } catch (IOException e) {
             System.out.print("Invalid file name, file was not open");
         }
 
-        return subb;
+        //if it is null here then the for loop was not entered(empty file)
+        if(subb == null){
+            System.out.print("File is empty");
+            return subb;
+        }
+        else{
+            return subb;
+        }
+        
 
     }
 
@@ -63,7 +100,7 @@ public class fileIO {
                 writebuff.close();
             }
             else{
-                writebuff.write("\nStudent name Student number GPA Grade\n");
+                writebuff.write("\nStudent name Student number GPA Grade\n\n");
                 for(int i = 0; i<sub.students.size(); i++){
                     writebuff.write(sub.students.get(i).getName()+" " );
                     writebuff.write(sub.students.get(i).getStudentNumber()+" " );
