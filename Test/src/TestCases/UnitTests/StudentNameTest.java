@@ -36,6 +36,7 @@ public class StudentNameTest{
         
     }
 
+    @Test
     //correct name
     void test4(){
         String expected = "";
