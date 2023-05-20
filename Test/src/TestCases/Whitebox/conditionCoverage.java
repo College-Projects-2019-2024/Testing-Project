@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import Main.Subject;
 
 public class conditionCoverage {
+    //each test case number corresponds to its number in the pdf
     
     @Test
     void test1() {
