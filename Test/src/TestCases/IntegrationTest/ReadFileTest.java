@@ -100,8 +100,6 @@ public class ReadFileTest {
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testFile6.txt";
         sub = fileIO.readFile(filename);
 
-        
-
         assertEquals("Error in test 2", "Software testing",sub.getName());
         assertEquals("Error in test 2", "CSE333",sub.getCode());
         assertEquals("Error in test 2", 100,sub.getFullMark());

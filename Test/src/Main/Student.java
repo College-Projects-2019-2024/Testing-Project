@@ -147,8 +147,9 @@ public class Student {
         if(s.charAt(0)==' ') return STUDENT_NAME_SPACE;
         for(char c : s.toCharArray())
         {
-           if(!Character.isAlphabetic(c) || !Character.isAlphabetic(c)&&c!=' ')
-                return STUDENT_NAME_INVALID;
+            if(!Character.isAlphabetic(c) ){
+                if(c!=' ') return STUDENT_NAME_INVALID;
+            }
         }
         return "";              
     }

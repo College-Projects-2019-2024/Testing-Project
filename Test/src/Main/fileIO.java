@@ -32,7 +32,7 @@ public class fileIO {
                     else{
                         subb = new Subject(line);
                         //if subject data is correct continue and create a student array for it
-                        if(subb.checkSubjectData() == ""){
+                        if(subb.checkSubjectData().equals("")){
                             subb.students = new ArrayList<Student>();
                         }
                         //if not correct return null
