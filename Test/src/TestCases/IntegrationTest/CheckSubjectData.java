@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class CheckSubjectData {
-
+    //check that the name is correct
     @Test
     void test1() {
 
@@ -14,7 +14,7 @@ public class CheckSubjectData {
         String actual = Subject.checkSubjectData("Networks","CSE333",100);
         assertEquals(actual,expected, actual);
     }
-
+// check that an error occurs when subject code is wrong
     @Test
     void test2() {
 
@@ -23,7 +23,7 @@ public class CheckSubjectData {
         assertEquals(actual,expected, actual);
     }
 
-
+// check that an error occurs when subject name is incorrect
     @Test
     void test3() {
 
