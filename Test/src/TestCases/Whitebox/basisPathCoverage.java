@@ -18,12 +18,9 @@ public class basisPathCoverage {
         out = new ByteArrayOutputStream();
         PrintStream print = new PrintStream(out);
         System.setOut(print);
-        
-        
     }
 
     //each test case number corresponds to its number in the pdf
-
     @Test
     public void test1(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\BasisPathCoverage\\testFile1.txt";
@@ -67,6 +64,7 @@ public class basisPathCoverage {
     }
 
     @Test
+    
     public void test5(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\BasisPathCoverage\\testFile5.txt";
         Subject sub = fileIO.readFile(filename);
@@ -79,6 +77,7 @@ public class basisPathCoverage {
     }
 
     @Test
+    
     public void test6(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\BasisPathCoverage\\testFile6.txt";
         Subject sub = fileIO.readFile(filename);
