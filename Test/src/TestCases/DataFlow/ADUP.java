@@ -43,7 +43,7 @@ public class ADUP{
     @Test
     public void test3(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile3.txt";
-        Subject sub = fileIO.readFile(filename);
+       fileIO.readFile(filename);
 
         String actual = out.toString();
         String expected = "File is empty";
@@ -64,7 +64,7 @@ public class ADUP{
     @Test
     public void test5(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile5.txt";
-        Subject sub = fileIO.readFile(filename);
+        fileIO.readFile(filename);
 
         String actual = out.toString();
         String expected = "No subject data\nSubject data must be in first line";

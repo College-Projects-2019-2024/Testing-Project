@@ -43,7 +43,7 @@ public class All_Use {
     @Test
     public void test3(){
         String filename = "D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\DataFlow\\testFile3.txt";
-        Subject sub = fileIO.readFile(filename);
+        fileIO.readFile(filename);
 
         String actual = out.toString();
         String expected = "File is empty";
