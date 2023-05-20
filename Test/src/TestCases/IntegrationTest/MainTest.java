@@ -18,7 +18,7 @@ public class MainTest {
     
     @Test
     public void test1() throws IOException {
-        var x = new String[]{"Test\\src\\TestFiles\\Integration\\testMain1.txt"};
+        var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain1.txt"};
         App.main(x);
         String subName = "Networks Course", subCode = "CSE333";
         String subFM = "100";
@@ -88,7 +88,7 @@ public class MainTest {
 
     @Test
     public void test2() throws IOException {
-        var x = new String[]{"Test\\src\\TestFiles\\Integration\\testMain2.txt"};
+        var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain2.txt"};
         App.main(x);
         String subName = "Very Long Course Name", subCode = "ABC123";
         String subFM = "100";
@@ -164,7 +164,7 @@ public class MainTest {
     }
     @Test
     public void test3() throws IOException {
-        var x = new String[]{"Test\\src\\TestFiles\\Integration\\testMain3.txt"};
+        var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain3.txt"};
         App.main(x);
         BufferedReader reader = new BufferedReader(new FileReader("output.txt"));
         String line = "x";
