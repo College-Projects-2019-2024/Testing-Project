@@ -17,6 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class MainTest {
     
     @Test
+    // check that the data from the input file is read and saved correctly
     public void test1() throws IOException {
         var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain1.txt"};
         App.main(x);
@@ -86,7 +87,7 @@ public class MainTest {
         reader.close();
     }
     
-
+   // another test with names that contain spaces
     @Test
     public void test2() throws IOException {
         var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain2.txt"};
@@ -165,7 +166,7 @@ public class MainTest {
     }
 
 
-
+    // if the student list is empty print that there are no students
     @Test
     public void test3() throws IOException {
         var x = new String[]{"D:\\senior 1 comp\\testing\\Project\\Testing-Project\\Test\\src\\TestFiles\\Integration\\testMain3.txt"};
@@ -177,7 +178,6 @@ public class MainTest {
             if(i==3) assertEquals("There are no students",line);
 
         }
-
         reader.close();
     }
 
