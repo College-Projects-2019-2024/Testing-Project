@@ -93,14 +93,14 @@ public class fileIO {
         try{
             file = new FileWriter("output.txt");
             BufferedWriter writebuff = new BufferedWriter(file);
-            writebuff.write("Subject name: " + sub.name +",  Max mark: " + sub.fullMark + "\n");
+            writebuff.write("Subject name: " + sub.name +" Max mark: " + sub.fullMark + "\n");
             
             if(sub.students.size() == 0){
                 writebuff.write("\nThere are no students\n");
                 writebuff.close();
             }
             else{
-                writebuff.write("\nStudent name Student number GPA Grade\n\n");
+                writebuff.write("Student name Student number GPA Grade\n");
                 for(int i = 0; i<sub.students.size(); i++){
                     writebuff.write(sub.students.get(i).getName()+" " );
                     writebuff.write(sub.students.get(i).getStudentNumber()+" " );
